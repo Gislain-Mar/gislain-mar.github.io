@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <img class="logo" src="logo.png" alt="">
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#" class="active" style="--navAni:1">Home</a></li>
+                <li><a href="#about" style="--navAni:2">About me </a></li>
+                <li><a href="#experience" style="--navAni:3">Experience</a></li>
+                <li><a href="#" style="--navAni:4">Education</a></li>
+                <li><a href="#" style="--navAni:5">Projects</a></li>
+                <li><a href="#" style="--navAni:6">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="detail">
+                <h3>Hi, It's Me</h3>
+                <h1>I'm <span style="color:#007bff;">Gislain</span></h1>
+                <p>I'm a Co-op student at CESI engineering school & web developer at CEGID. I'm interested in new technologies, mobile development, artificial intellignce and cybersecurity</p>
+                <div class="social">
+                    <a href="#" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="f-1.png" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 id="about" style="color:#8396b3; text-align: center; margin: 150px 0px 50px">About me</h2>
+    <section class="container">
+        <div class="about">
+            <div>
+                <div class="images">
+                    <img src="security.png" class="img-w">
+                </div>
+            </div>
+            <div>
+                <p>I’m currently 21 years old and in my 1st year of computer engineering school, doing a alternship with the Volvo Trucks. Here are some of the technologies I've worked with:</p>
+                <div class="technologies">
+                    <a ><i class='bx bxl-git'></i>Git</a>
+                    <a><i class='bx bxl-java'></i>Java</a>
+                    <a><i class='bx bxl-javascript'></i>JavaScript</a>
+                    <a><i class='bx bxl-visual-studio'></i>Visual Studio</a>
+                </div>
+                <div class="technologies">
+                    <a><svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 550 550"><path fill="#007bff" d="M448 156.09c0-4.51-.08-9-.2-13.52a196.31 196.31 0 0 0-2.58-29.42 99.62 99.62 0 0 0-9.22-28A94.08 94.08 0 0 0 394.84 44a99.17 99.17 0 0 0-28-9.22 195 195 0 0 0-29.43-2.59c-4.51-.12-9-.17-13.52-.2H124.14c-4.51 0-9 .08-13.52.2-2.45.07-4.91.15-7.37.27a171.68 171.68 0 0 0-22.06 2.32 103.06 103.06 0 0 0-21.21 6.1q-3.46 1.45-6.81 3.12a94.66 94.66 0 0 0-18.39 12.32c-1.88 1.61-3.69 3.28-5.43 5A93.86 93.86 0 0 0 12 85.17a99.45 99.45 0 0 0-9.22 28 196.31 196.31 0 0 0-2.54 29.4c-.13 4.51-.18 9-.21 13.52v199.83c0 4.51.08 9 .21 13.51a196.08 196.08 0 0 0 2.58 29.42 99.3 99.3 0 0 0 9.22 28A94.31 94.31 0 0 0 53.17 468a99.47 99.47 0 0 0 28 9.21 195 195 0 0 0 29.43 2.59c4.5.12 9 .17 13.52.2H323.91c4.51 0 9-.08 13.52-.2a196.59 196.59 0 0 0 29.44-2.59 99.57 99.57 0 0 0 28-9.21A94.22 94.22 0 0 0 436 426.84a99.3 99.3 0 0 0 9.22-28 194.79 194.79 0 0 0 2.59-29.42c.12-4.5.17-9 .2-13.51V172.14c-.01-5.35-.01-10.7-.01-16.05zm-69.88 241c-20-38.93-57.23-29.27-76.31-19.47-1.72 1-3.48 2-5.25 3l-.42.25c-39.5 21-92.53 22.54-145.85-.38A234.64 234.64 0 0 1 45 290.12a230.63 230.63 0 0 0 39.17 23.37c56.36 26.4 113 24.49 153 0-57-43.85-104.6-101-141.09-147.22a197.09 197.09 0 0 1-18.78-25.9c43.7 40 112.7 90.22 137.48 104.12-52.57-55.49-98.89-123.94-96.72-121.74 82.79 83.42 159.18 130.59 159.18 130.59 2.88 1.58 5 2.85 6.73 4a127.44 127.44 0 0 0 4.16-12.47c13.22-48.33-1.66-103.58-35.31-149.2C329.61 141.75 375 229.34 356.4 303.42c-.44 1.73-.95 3.4-1.44 5.09 38.52 47.4 28.04 98.17 23.13 88.59z"/></svg>Swift</a>
+                    <a><svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 24 24"><path fill="#007bff" d="M19.06 5.333c.452-.194.774-.258 1.097-.194c.516.13.774.516.968.71c.194.387.903.774 1.226.839c.258.064.71-.645 1.033-1.29c.322-.582.516-1.356.451-1.55c-.064-.193-.968-.58-1.161-.58c-.13 0-.388.129-.84.064c-.45-.064-.903-.58-1.16-.968c-.453-.645-1.098-1.032-1.679-1.355C18.35.686 17.64.493 16.93.364C15.898.105 14.865-.088 13.833.04c-.58.064-1.29.129-1.807.323c-.065 0-.194.193-.065.193s.581.065.581.065s-.58.129-.58.258c0 .13.064.13.129.13c.064 0 1.484-.065 2.065 0c.645.128 1.355.45 1.807 1.225c.774 1.42.451 2.775.258 3.227c-.968 2.13-8.648 15.23-9.035 16.133c-.387.903-.516 1.484.581 2.065s1.678.322 2-.065c.388-.516 7.034-17.165 9.293-18.262zm-3.614 8.711h1.549c1.032 0 1.226.517 1.226.71c.065.516-.194 1.162-1.226 1.162h-.968l.774 1.29c.452.775.258 1.162 0 1.42c-.387.387-1.226.387-1.677-.452l-.904-1.548c-.645 1.42-1.29 2.968-2.065 4.775h4.001c1.936 0 3.55-1.613 3.55-3.55V6.56c-.065-.13-.194-.065-.259 0c-.387.451-1.484 2-4 7.485zm-9.809 8.002h-.322a4.186 4.186 0 0 1-4.195-4.194V7.01a4.186 4.186 0 0 1 4.195-4.195h9.357c-.194-.194-.968-.516-1.742-.452c-.323 0-.968.13-1.356-.129c-.387-.322-.322-.516-.903-.516H4.928A4.764 4.764 0 0 0 .152 6.494V18.24c0 2.646 2.13 4.775 4.453 4.71c.645 0 .839-.516 1.032-.903zm14.778-15.1v10.906a4.186 4.186 0 0 1-4.194 4.194h-4.324s-.387 1.033.839 1.033h3.872a4.764 4.764 0 0 0 4.775-4.776V8.817c.065-.903-.71-1.484-.968-1.871zM1.83 7.01v10.84c0 1.937 1.613 3.55 3.55 3.55h.58c0-.065.774-1.42 2.452-4.26c.194-.386.452-.773.71-1.225h-4.71c-.581 0-.904-.387-.969-.71c-.129-.516.194-1.162.904-1.162h2.387l3.034-5.291s-.71-1.29-.904-1.613c-.258-.452-.129-.904.13-1.162c.386-.387 1.032-.58 1.677.452l.258.387l.258-.387c.58-.84.968-.775 1.29-.71c.517.129.84.71.388 1.613l-4.001 6.711h1.355c.452-.774.904-1.548 1.355-2.387c-.064-.323-.129-.71-.064-1.033c.064-.516.323-.968.645-1.355l.387.645c1.227-2.13 2.13-3.936 2.388-4.646c.13-.387.323-1.162.13-1.807H5.38a3.54 3.54 0 0 0-3.55 3.55zm2.775 10.776c0-.064.774-1.42.774-1.42c1.227-.322 1.807.452 1.872.517c0 0-.84 1.484-1.097 1.742s-.581.323-.904.258c-.516-.129-.839-.645-.645-1.097z"/></svg>Xcode</a>
+                    <a><svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 550 550"><path fill="#007bff" d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>Unity</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="experience">
+        <h1 id="experience" style="color:#8396b3; text-align: center; margin: 150px 0px 50px">Experience</h1>
+        <div class="experience">
+           <div class="tab">
+                <button id="companyTab" class="company active">CEGID</button>
+                <button class="company">SDIS 26</button>
+                <button class="company">E.Leclerc</button>
+                <button class="company">Amblard</button>
+           </div>
+           <div style="margin-top: 20px; padding: 15px">
+                <span id="role" class="h4">IT Apprentice</span>
+                <small>-</small>
+                <span id="company">CEGID</span>
+                <div>
+                    <small id="date">October 2022 - now</small>
+                </div>
+                <div id="descriptif">I’m working on various analysis topics at user level. And I’m helping to develop new functionalities and modernize.</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
