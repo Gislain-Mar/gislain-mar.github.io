@@ -211,8 +211,8 @@ p {
 }
 
 .experience {
-    background: linear-gradient(145deg, #1f252e, #2e3239);
-    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #1b1f27;
+    background: linear-gradient(145deg, #f4f4f5, #d0d1d2);
+    box-shadow: 0px 0px 19px #afafb0;
     border-radius: 10px;
     min-height: 400px;
     animation: topSideAni 1.5s ease forwards;
@@ -288,6 +288,140 @@ p {
     animation-delay: 1.5s;
 }
 
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .wrapper i {
+    height: 50px;
+    width: 50px;
+    background: var(--primary-color);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  
+    z-index:2;
+  }
+  
+  .wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+  }
+  
+  .wrapper i:first-child {
+    left: -22px;
+  }
+  
+  .wrapper i:last-child {
+    right: -22px;
+  }
+  
+  .wrapper .carousel {
+    padding: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  
+    -webkit-mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  
+  .carousel.dragging.card {
+    cursor: grab;
+    user-select: none;
+  }
+  
+  .carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel .card {
+    z-index: 1;
+    height: 342px;
+    background: linear-gradient(145deg, #f4f4f5, #d0d1d2);
+    box-shadow: 0px 0px 9px #94949c;
+    list-style: none;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .card .img {
+    background: #8B53FF;
+    width: 148px;
+    height: 148px;
+    border-radius: 15%;
+  }
+  
+  .card .img img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 15%;
+    border: 4px solid #8396b3;
+  }
+  
+  .card h2 { 
+    opacity: 1;
+    animation: none;
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  
+  .card span {
+    color: #6a6d78;
+    font-size: 1.31rem;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
 /* Section 1 End */
 
 /* Dark Mode */
@@ -328,6 +462,16 @@ p {
     .main .images::before {
         background: linear-gradient(145deg, #1f252e, #2e3239);
         box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #1b1f27;
+    }
+
+    .experience {
+        background: linear-gradient(145deg, #1f252e, #2e3239);
+        box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #1b1f27;
+    }
+
+    .carousel .card {
+        background: linear-gradient(145deg, #1f252e, #2e3239);;
+        box-shadow: 0px 0px 9px #1c1e22;
     }
 }
 
