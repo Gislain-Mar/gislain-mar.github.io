@@ -3,7 +3,7 @@
 
 :root {
     --primary-color: #007bff;/*#007bff f9532d*/
-    --primary-dark: #1F252E;
+    --primary-dark: #35363A;
 }
 
 * {
@@ -19,6 +19,8 @@ body {
 /* Genral */
 .container {
     padding: 0 8.4rem;
+    max-width: 1400px;
+    margin: auto;
 }
 
 .img-w {
@@ -39,6 +41,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    max-width: none;
 }
 
 .logo {
@@ -211,8 +214,8 @@ p {
 }
 
 .experience {
-    background: linear-gradient(145deg, #f4f4f5, #d0d1d2);
-    box-shadow: 0px 0px 19px #afafb0;
+    background: #E1E1E2;
+    box-shadow: 0px 0px 4px #848484;
     border-radius: 10px;
     min-height: 400px;
     animation: topSideAni 1.5s ease forwards;
@@ -254,6 +257,8 @@ p {
 
 .images img {
     position: relative;
+    border-radius: 6px;
+    margin-top: 50px;
 }
 
 .images::before {
@@ -267,13 +272,9 @@ p {
     border-radius: 6px;
 }
 
-.main .images::before {
-    background: linear-gradient(145deg, #e2e8ec, #ffffff);
-    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
-}
 
 .images {
-    width: 80%;
+    width: 50%;
     position: relative;
     z-index: -1;
 }
@@ -289,10 +290,10 @@ p {
 }
 
 .wrapper {
-    max-width: 1100px;
     width: 100%;
     position: relative;
     padding: 20px;
+    margin: auto;
   }
   
   .wrapper i {
@@ -366,7 +367,8 @@ p {
   .carousel .card {
     z-index: 1;
     height: 342px;
-    background: linear-gradient(145deg, #f4f4f5, #d0d1d2);
+    max-width: 500px;
+    background: #E1E1E2;
     box-shadow: 0px 0px 9px #94949c;
     list-style: none;
     border-radius: 8px;
@@ -465,8 +467,8 @@ p {
     }
 
     .experience {
-        background: linear-gradient(145deg, #1f252e, #2e3239);
-        box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #1b1f27;
+        background: #202124;
+        box-shadow: 0px 0px 4px #1c1e22;
     }
 
     .carousel .card {
