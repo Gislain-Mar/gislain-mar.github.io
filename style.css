@@ -14,7 +14,8 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-
+    background: #ffffff;    
+    color: #252528;
 }
 /* Genral */
 .container {
@@ -23,17 +24,45 @@ body {
     margin: auto;
 }
 
+.images {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 35px 68px 0 rgba(136, 174, 222, 0.4),
+        inset 0 -8px 16px 0 #b9d1f1;
+    backdrop-filter: blur(15px);
+}
+
 .img-w {
     width: 100%;
+    border-radius: 15px;
 }
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 300px;
+    z-index: -1;
+}
+
+.main .images {
+    margin-left: auto;
+}
+
+.images {
+    opacity: 0;
+    animation: imageAni 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
 /* Nav */
 header {
-    position: relative;
     box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
     background: #fff;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
 }
 
 .page-header {
@@ -214,12 +243,79 @@ p {
 }
 
 .experience {
-    background: #E1E1E2;
-    box-shadow: 0px 0px 4px #848484;
-    border-radius: 10px;
-    min-height: 400px;
-    animation: topSideAni 1.5s ease forwards;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
 }
+
+.content {
+    height: 400px;
+    padding: 10px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 35px 68px 0 rgba(229, 227, 222, 0.42),
+        inset 0 -8px 16px 0 rgba(0, 68, 241, 0.214);
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.drop {
+    background: rgb(0, 123, 255);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+  }
+
+.drop1 {
+    width: 150px;
+    height: 150px;
+    top: 325px;
+    left: -60px;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transform: rotate(45deg);
+  }
+  
+  .drop2 {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: -80%;
+    right: 0;
+    z-index: 4;
+  }
+  
+  .drop3 {
+    width: 60px;
+    height: 60px;
+    top: 160px;
+    right: -30px;
+    z-index: 3;
+  }
+  
+  .drop4 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: -55px;
+    right: 20px;
+  }
+
+  .triangle {
+      width: 150px;
+    height: 150px;
+    top: 325px;
+    left: 150px;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transform: rotate(45deg);
+  }
 
 .tab {
     overflow: hidden;
@@ -255,40 +351,6 @@ p {
     line-height: 1.2;
 }
 
-.images img {
-    position: relative;
-    border-radius: 6px;
-    margin-top: 50px;
-}
-
-.images::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 130px);
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    border-radius: 6px;
-}
-
-
-.images {
-    width: 50%;
-    position: relative;
-    z-index: -1;
-}
-
-.main .images {
-    margin-left: auto;
-}
-
-.images {
-    opacity: 0;
-    animation: imageAni 1s ease forwards;
-    animation-delay: 1.5s;
-}
-
 .wrapper {
     width: 100%;
     position: relative;
@@ -299,7 +361,6 @@ p {
   .wrapper i {
     height: 50px;
     width: 50px;
-    background: var(--primary-color);
     text-align: center;
     line-height: 50px;
     border-radius: 50%;
@@ -310,7 +371,7 @@ p {
     transform: translateY(-50%);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
   
-    z-index:2;
+    z-index:10;
   }
   
   .wrapper i:active {
@@ -326,6 +387,7 @@ p {
   }
   
   .wrapper .carousel {
+    min-height: 500px;
     padding: 20px;
     display: grid;
     grid-auto-flow: column;
@@ -365,32 +427,27 @@ p {
   }
   
   .carousel .card {
-    z-index: 1;
+    z-index: 10;
     height: 342px;
     max-width: 500px;
-    background: #E1E1E2;
-    box-shadow: 0px 0px 9px #94949c;
     list-style: none;
-    border-radius: 8px;
+    border-radius: 15px;
     display: flex;
     cursor: pointer;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 35px 68px 0 rgba(229, 227, 222, 0.42),
+        inset 0 -8px 16px 0 rgba(0, 68, 241, 0.214);
+    backdrop-filter: blur(15px);
     
     &:hover {
       transform: scale(1.05);
     }
   }
-  
-  .card .img {
-    background: #8B53FF;
-    width: 148px;
-    height: 148px;
-    border-radius: 15%;
-  }
+
   
   .card .img img {
     width: 140px;

@@ -85,48 +85,58 @@
     <section class="container" id="experience">
         <h1 id="experience" style="color:#8396b3; text-align: center; margin: 150px 0px 50px">Experiences</h1>
         <div class="experience">
-           <div class="tab">
-                <button id="companyTab" class="company active">CEGID</button>
-                <button class="company">SDIS 26</button>
-                <button class="company">E.Leclerc</button>
-                <button class="company">Amblard</button>
-           </div>
-           <div style="margin-top: 20px; padding: 15px">
-                <span id="role" class="h4">IT Apprentice</span>
-                <small>-</small>
-                <span id="company">CEGID</span>
-                <div>
-                    <small id="date">October 2022 - now</small>
+            <div class="content" style="z-index: 10;">
+               <div class="tab">
+                    <button id="companyTab" class="company active">CEGID</button>
+                    <button class="company">SDIS 26</button>
+                    <button class="company">E.Leclerc</button>
+                    <button class="company">Amblard</button>
                 </div>
-                <div id="descriptif">I’m working on various analysis topics at user level. And I’m helping to develop new functionalities and modernize.</div>
+                <div style="margin-top: 20px; padding: 15px">
+                    <span id="role" class="h4">IT Apprentice</span>
+                    <small>-</small>
+                    <span id="company">CEGID</span>
+                    <div>
+                        <small id="date">October 2022 - now</small>
+                    </div>
+                    <div id="descriptif">I’m working on various analysis topics at user level. And I’m helping to develop new functionalities and modernize.</div>
+                </div>
             </div>
+               
+            <div class="drop drop1"></div>
+            <div class="drop drop2"></div>
+            <div class="drop drop3"></div>
+            <div class="drop drop4"></div>
         </div>
     </section>
 
-    <section class="container" id="project">
-        <h1 id="experience" style="color:#8396b3; text-align: center; margin: 150px 0px 50px">Projects</h1>
-        <div class="wrapper">
+    <section class="container" id="project" style="position: relative;">
+        <h1 id="experience" style="color:#8396b3; text-align: center; margin: 150px 0px 50px;">Projects</h1>
+        <div class="wrapper" style="z-index: 10;">
             <i id="left" class="fa-solid fa-angle-left"></i>
             <ul class="carousel">
-              <li class="card">
+            <li class="card">
                 <div class="img"><img src="images/movie.jpeg" alt="img" draggable="false"></div>
                 <h2>Movie app</h2>
                 <span>iOS application</span>
-              </li>
-              <li class="card">
+            </li>
+            <li class="card">
                 <div class="img"><img src="images/today.png" alt="img" draggable="false"></div>
                 <h2>Today</h2>
                 <span>iOS application</span>
-              </li>
-              <li class="card">
+            </li>
+            <li class="card">
                 <div class="img"><img src="images/scrumdinger.png" alt="img" draggable="false"></div>
                 <h2>Scrumdinger</h2>
                 <span>iOS application</span>
-              </li>
+            </li>
             </ul>
             <i id="right" class="fa-solid fa-angle-right"></i>
-          </div>
+        </div>
+
+        <div class="drop triangle"></div>
     </section>
+
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
