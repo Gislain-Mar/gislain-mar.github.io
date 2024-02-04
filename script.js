@@ -1,27 +1,37 @@
-const experience = [["CEGID", "Oct 2023 - now", "IT Apprentice", "I’m working on various analysis topics at user level. And I’m helping to develop new functionalities and modernize."],
-                    ["SDIS 26", "May 2021 - July 2021", "IT intern", "test"],
-                    ["E.Leclerc", "May 2021 - September 2022", "Student Job", "Aside my studies, I worked at E.Leclerc"],
-                    ["Amblard", "July 2017 - JULY 2022", "Summer Job", "Aside my studies, I worked as seasonnal"]]
+// cursor
+var cursor = document.getElementById('cursor')
+document.addEventListener('mousemove', (e) => {
+  const height = cursor.offsetHeight;
+  const width = cursor.offsetWidth;
+
+  cursor.style.left = (e.pageX - width/2) + 'px';
+  cursor.style.top = (e.pageY - height/2) + 'px';
+})
+// experience
+const experiences = [["Oct 2023 - now", "Software Developer Apprentice", "During this apprenticeship, I completed different tasks. The first one was to manage the resolivng of security vulnerabilities due to denpendencies in different projects. Indeed, during this task, I planified their updates and did them. Moreover, I managed the updates in other teams in order to ensure the proper functioning of our product. My second task was to develop the buttons of our product as web components. This task allowed to unify our development, to meet our expectations and meet the accessibility expectations who play an essantial role in the interface development."],
+                    ["May 2021 - July 2021", "Network Administrator Intern", "test"],
+                    ["May 2021 - September 2022", "Cashier as Student Job", "Aside my studies, I worked at E.Leclerc"],
+                    ["July 2017 - JULY 2022", "Seasonnal picker", "Aside my studies, I worked as seasonnal"]]
 
 var companyButtons = document.querySelectorAll('.company');
-var companyName = document.getElementById('company');
 var role = document.getElementById('role');
 var date = document.getElementById('date');
-var descriptif = document.getElementById('descriptif');
+var description = document.getElementById('description');
 
-function loadData(index) {
-    companyName.innerHTML = experience[index][0];   
-    role.innerHTML = experience[index][2];   
-    date.innerHTML = experience[index][1];   
-    descriptif.innerHTML = experience[index][3];   
+function loadExperienceData(index) {
+    role.innerHTML = experiences[index][1];   
+    date.innerHTML = experiences[index][0];   
+    description.innerHTML = experiences[index][2];   
 }
 
 var activeCompanyButton = companyButtons[0];
+loadExperienceData(Array.from(companyButtons).indexOf(activeCompanyButton));
+
 companyButtons.forEach(companyButton => {
     companyButton.addEventListener('click', function() {
        activeCompanyButton.classList.remove('active');
         companyButton.classList.add('active');
-        loadData(Array.from(companyButtons).indexOf(companyButton));
+        loadExperienceData(Array.from(companyButtons).indexOf(companyButton));
         activeCompanyButton = companyButton;
     })
 });

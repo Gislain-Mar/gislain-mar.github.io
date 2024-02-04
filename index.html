@@ -14,27 +14,20 @@
 </head>
 
 <body>
-    <header class="page-header" style="justify-content: space-between; align-items: center;">
-        <div class="logo">
-            <img class="logo" src="images/logo.png" alt="" style="margin-left: 50px;">
-        </div>
-        <input type="checkbox" id="click">
+    <div id="cursor"></div>
+    <header class="page-header">
+        <img class="logo" src="images/logo.png">
 
         <ul>
-            <li><a href="#" class="active" style="--navAni:1">Home</a></li>
-            <li><a href="#about" style="--navAni:2">About me </a></li>
-            <li><a href="#experience" style="--navAni:3">Experience</a></li>
+            <li><a href="#aboutme" style="--navAni:2">About me </a></li>
+            <li><a href="#experiences" style="--navAni:3">Experience</a></li>
             <li><a href="#" style="--navAni:4">Education</a></li>
-            <li><a href="#" style="--navAni:5">Projects</a></li>
+            <li><a href="#projects" style="--navAni:5">Projects</a></li>
             <li><a href="#" style="--navAni:6">Contact</a></li>
         </ul>
-        <label class="mode" style="margin-right: 50px;">
-            <input type="checkbox" id="darkModeToggle">
-            <i class='bx bxs-moon'></i>
-        </label>
     </header>
 
-    <section class="container">
+    <section class="container" id="aboutme">
         <div class="main">
             <div class="detail">
                 <h3>Hi, It's Me</h3>
@@ -53,20 +46,12 @@
         </div>
     </section>
 
-    <h2 id="about" style="color:#8396b3; text-align: center; margin: 150px 0px 50px">About me</h2>
+    <h2 class="aboutme-title">About me</h2>
     <section class="container">
         <div class="about">
+            <img src="images/character.png" class="character">
             <div>
-                <model-viewer
-                src="macbook.glb"
-                camera-controls
-                disable-zoom
-                camera-orbit="auto auto 20m"
-                auto-rotate>
-                </model-viewer>
-            </div>
-            <div>
-                <p>I’m currently 21 years old and in my 1st year of computer engineering school, doing a alternship with the Volvo Trucks. Here are some of the technologies I've worked with:</p>
+                <p>I’m currently 21 years old and in my 1st year of computer engineering school, doing a alternship wat CEGID. Here are some of the technologies I've worked with:</p>
                 <div class="technologies">
                     <a ><i class='bx bxl-git'></i>Git</a>
                     <a><i class='bx bxl-java'></i>Java</a>
@@ -82,37 +67,48 @@
         </div>
     </section>
 
-    <section class="container" id="experience">
-        <h1 id="experience" style="color:#8396b3; text-align: center; margin: 150px 0px 50px">Experiences</h1>
+    <section class="container" id="experiences">
+        <h1 class="experience-title">Experiences</h1>
         <div class="experience">
-            <div class="content" style="z-index: 10;">
-               <div class="tab">
-                    <button id="companyTab" class="company active">CEGID</button>
-                    <button class="company">SDIS 26</button>
-                    <button class="company">E.Leclerc</button>
-                    <button class="company">Amblard</button>
-                </div>
-                <div style="margin-top: 20px; padding: 15px">
-                    <span id="role" class="h4">IT Apprentice</span>
-                    <small>-</small>
-                    <span id="company">CEGID</span>
-                    <div>
-                        <small id="date">October 2022 - now</small>
-                    </div>
-                    <div id="descriptif">I’m working on various analysis topics at user level. And I’m helping to develop new functionalities and modernize.</div>
+            <div class="content">
+                Software Developer Apprentice - CEGID
+                Oct 2023 - Now
+                <div class="badges">
+                    <div class="badge">JAVA</div>
+                    <div class="badge">HTML & SCSS</div>
+                    <div class="badge">JavaScript</div>
+                    <div class="badge">Maven</div>
                 </div>
             </div>
-               
-            <div class="drop drop1"></div>
-            <div class="drop drop2"></div>
-            <div class="drop drop3"></div>
-            <div class="drop drop4"></div>
+            <div class="content">
+                Network Administator intern - SDIS 26
+                <div class="badges">
+                    <div class="badge">Zabbix</div>
+                    <div class="badge">Wix</div>
+                </div>
+            </div>
+            <div class="content">
+                Cashier as Sutend Job - E.Leclerc
+                <div class="badges">
+                    <div class="badge">Patient</div>
+                    <div class="badge">Adivce</div>
+                    <div class="badge">Team Working</div>
+                </div>
+            </div>
+            <div class="content">
+                Seasonnal Picker - Amblard
+                <div class="badges">
+                    <div class="badge">Team Working</div>
+                    <div class="badge">Ponctual</div>
+                    <div class="badge">Rigor</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="container" id="project" style="position: relative;">
+    <section class="container" id="projects" style="position: relative;">
         <h1 id="experience" style="color:#8396b3; text-align: center; margin: 150px 0px 50px;">Projects</h1>
-        <div class="wrapper" style="z-index: 10;">
+        <div class="wrapper">
             <i id="left" class="fa-solid fa-angle-left"></i>
             <ul class="carousel">
             <li class="card">
@@ -133,28 +129,7 @@
             </ul>
             <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
-
-        <div class="drop triangle"></div>
     </section>
-
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-        if (isDarkMode) {
-            body.classList.add('dark-mode');
-            darkModeToggle.checked = true;
-        }
-        darkModeToggle.addEventListener('change', () => {
-            if (darkModeToggle.checked) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
