@@ -16,15 +16,17 @@ body {
     font-family: 'Outfit', sans-serif;
     background: #0F172A;   
     color: rgb(226, 232, 240); 
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 #cursor {
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
-    background: radial-gradient(rgba(29, 78, 216, 0.15), rgb(15, 23, 42), transparent 80%);
+    background: radial-gradient(rgba(29, 78, 216, 0.15), rgb(15, 23, 42), transparent 100%);
 }
 
 /* General */
@@ -169,7 +171,7 @@ li a:hover {
 .about .character {
     height: 400px; 
     width: 400px; 
-    z-index: 1000;
+    z-index: 10;
     margin-top: -50px;
 }
 
@@ -257,26 +259,43 @@ li a:hover {
 }
 
 .content {
-    min-height: 250px;
-    border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    position:relative;
+    padding: 15px;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: relative;
     cursor: default;
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+}  
+
+.title {
+    font-weight: 500; 
+    height: 20px; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.date {
+    color: rgb(100, 116, 139);
+}
+
+.description {
+    margin-top: 8px;
+    font-size: .875rem;
+    line-height: 1.5;
+    color: #8A99AE;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .badges {
-    display: flex;
-    align-items: flex-end;
-    position: absolute;
-    bottom: 0;
-    margin: 0 0 12px 7px;
+    margin: 20px 0 0 0;
 }
 
 .badge {
+    font-size: 14px;
     color: rgb(0, 200, 255);
     background-color: rgba(0, 115, 238, 0.2);
     padding: 4px 12px 4px;
@@ -447,7 +466,6 @@ li a:hover {
   }
 /* Section 1 End */
 
-
 /* Animation */
 @keyframes leftSideAni {
     0% {
@@ -496,6 +514,24 @@ li a:hover {
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeAnimation {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.4;
+    }
+  }
+
+@keyframes reversefadeAnimation {
+    from {
+        opacity: 0.4;
+    }
+    to {
         opacity: 1;
     }
 }
